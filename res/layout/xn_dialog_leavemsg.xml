@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_dialog_leavemsg"
+    android:minWidth="320dip"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@null"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingBottom="30dip"
+        android:paddingTop="30dip" >
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dip"
+            android:text="客服离线或忙碌,请留言..."
+            android:textColor="#222222"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/positiveButton"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="0.5dip"
+            android:layout_weight="1"
+            android:background="@drawable/bg_dialog_leavemsg_left_btn"
+            android:paddingBottom="15dp"
+            android:paddingTop="15dp"
+            android:singleLine="true"
+            android:text="进入留言界面"
+            android:textColor="@color/xn_white"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/negativeButton"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0.5dip"
+            android:layout_weight="1"
+            android:background="@drawable/bg_dialog_leavemsg_right_btn"
+            android:paddingBottom="15dp"
+            android:paddingTop="15dp"
+            android:singleLine="true"
+            android:text="返回等待客服"
+            android:textColor="@color/xn_white"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+</LinearLayout>

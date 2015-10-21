@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/xn_bg_color" >
+
+    <RelativeLayout
+        android:id="@+id/rl_hsitalk_top"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="#FFFFFF" >
+
+        <TextView
+            android:id="@+id/tv_hsitalk_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/xn_chatpage_kfname"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/xn_black" />
+
+        <ImageView
+            android:id="@+id/iv_hsitalk_finsh"
+            android:layout_width="30dp"
+            android:layout_height="26dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="14dp"
+            android:src="@drawable/sdk_finish2" />
+    </RelativeLayout>
+    <View    
+        android:layout_below="@id/rl_hsitalk_top"
+        android:layout_height="1px"   
+        android:background="#adadad"   
+        android:layout_width="fill_parent">  
+</View> 
+    <ListView
+        android:id="@+id/lv_histalk"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/rl_hsitalk_bottom"
+        android:layout_below="@id/rl_hsitalk_top"
+        android:cacheColorHint="#FFFFFF"
+        android:divider="@null"
+        android:overScrollMode="never"
+        android:listSelector="@drawable/list_selector"
+        android:transcriptMode="alwaysScroll" />
+    <View    
+        android:layout_above="@id/rl_hsitalk_bottom"
+        android:layout_height="1px"   
+        android:background="#adadad"   
+        android:layout_width="fill_parent">  
+	</View> 
+    <RelativeLayout
+        android:id="@+id/rl_hsitalk_bottom"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="#FFFFFF" 
+        android:gravity="center_vertical"
+        >
+        
+        <TextView
+            android:id="@+id/tv_hsitalk_last"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:text="@string/xn_histalk_last"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/xn_black" 
+            />
+
+        <TextView
+            android:id="@+id/tv_hsitalk_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:gravity="center"
+            android:text="@string/xn_histalk_next"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/xn_black" 
+            />
+
+    </RelativeLayout>
+
+</RelativeLayout>

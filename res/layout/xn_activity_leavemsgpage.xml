@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/re_father"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/xn_white"
+    android:clickable="true" >
+
+    <RelativeLayout
+        android:id="@+id/sdk_chat_top"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@color/xn_title_color" >
+
+        <ImageView
+            android:id="@+id/sdt_chat_back"
+            android:layout_width="30dp"
+            android:layout_height="26dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:src="@drawable/left_arrow" />
+
+        <TextView
+            android:id="@+id/tv_leave_msg_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/xn_leave_message"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/xn_white" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sdk_chat_top" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@id/sdk_chat_top"
+            android:orientation="vertical" >
+
+            <EditText
+                android:id="@+id/tv_leavemsg"
+                android:layout_width="fill_parent"
+                android:layout_height="100dp"
+                android:layout_below="@id/sdk_chat_top"
+                android:layout_margin="10dp"
+                android:gravity="top"
+                android:hint="请在这里留言(我们会尽快联系你哦~)"
+                android:textSize="16sp" >
+            </EditText>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:layout_below="@id/tv_leavemsg"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/xn_white"
+                    android:visibility="gone" />
+
+                <EditText
+                    android:id="@+id/tv_name"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:hint="请输入昵称"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/xn_white"
+                    android:visibility="gone" />
+
+                <EditText
+                    android:id="@+id/tv_phone"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:hint="请输入手机号码"
+                    android:numeric="integer"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/tv_email"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/sdk_chat_top"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:hint="请输入邮箱地址"
+                    android:textSize="16sp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="5dp" >
+
+                    <ImageView
+                        android:id="@+id/sdk_chat_finsh"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/bg_leavemsgpage_submit"
+                        android:clickable="true" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="提交"
+                        android:textColor="@color/xn_white"
+                        android:textSize="18sp" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

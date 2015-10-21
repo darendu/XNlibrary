@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/xn_white" >
+
+    <RelativeLayout
+        android:id="@+id/sdk_chat_top"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/xn_title_color" >
+
+        <TextView
+            android:id="@+id/tv_chat_username"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="@string/xn_chatpage_kfname"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/xn_white" />
+
+        <ImageView
+            android:id="@+id/sdk_chat_finsh"
+            android:layout_width="30dp"
+            android:layout_height="26dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:src="@drawable/left_arrow" />
+
+        <ImageView
+            android:id="@+id/iv_cometlight"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/red"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/iv_mqttlight"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/iv_cometlight"
+            android:background="@drawable/red"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:layout_below="@id/sdk_chat_top"
+        android:background="#adadad" >
+    </View>
+
+    <com.xiaoneng.view.XNListView
+        android:id="@+id/chatListView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/fl_chat"
+        android:layout_below="@+id/fl_showgoods"
+        android:cacheColorHint="#FFFFFF"
+        android:divider="@null"
+        android:listSelector="@drawable/list_selector"
+        android:overScrollMode="never"
+        android:transcriptMode="normal" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:layout_above="@id/fl_chat"
+        android:background="#adadad" >
+    </View>
+
+    <FrameLayout
+        android:id="@+id/fl_chat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" >
+
+        <!-- 聊天输入框 -->
+
+        <include
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/xn_custom_facerelativelayout"
+            android:clickable="false" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/leave_sf"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_below="@id/sdk_chat_top"
+        android:background="#FAF9DE"
+        android:visibility="invisible" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+
+            <TextView
+                android:id="@+id/fk_s"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:clickable="false"
+                android:textColor="@color/xn_red" />
+        </RelativeLayout>
+    </FrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/fl_showgoods"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_below="@id/sdk_chat_top"
+        android:layout_margin="8dp"
+        android:background="@color/xn_bg_color"
+        android:visibility="gone" >
+
+        <include
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/xn_showgoods" />
+    </RelativeLayout>
+
+</RelativeLayout>

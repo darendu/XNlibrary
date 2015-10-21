@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.xiaoneng.view.FaceRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/FaceRelativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:background="@color/xn_red" />
+
+    <RelativeLayout
+        android:id="@+id/rl_input"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/xn_white"
+        android:padding="4dp" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <RelativeLayout
+                android:id="@+id/oo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:layout_marginTop="4dp"
+                android:layout_weight="4"
+                android:background="#FFFFFF" >
+
+                <ImageButton
+                    android:id="@+id/btn_voice"
+                    android:layout_width="38dip"
+                    android:layout_height="38dip"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="4dp"
+                    android:background="@drawable/voice_selector"
+                    android:scaleType="fitXY" />
+
+                <!-- 文本框 -->
+
+                <EditText
+                    android:id="@+id/et_sendmessage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="50dp"
+                    android:layout_toLeftOf="@+id/btn_face"
+                    android:background="@drawable/bg_chat_edit"
+                    android:focusable="true"
+                    android:gravity="left|center_vertical"
+                    android:inputType="textMultiLine"
+                    android:minLines="6"
+                    android:padding="4dp"
+                    android:singleLine="true"
+                    android:textColor="#666666"
+                    android:textSize="18sp"
+                    android:visibility="visible" />
+
+                <Button
+                    android:id="@+id/btn_record"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="50dp"
+                    android:layout_toLeftOf="@+id/btn_face"
+                    android:background="@drawable/record1"
+                    android:gravity="center"
+                    android:text="@string/xn_custom_record"
+                    android:textColor="#888888"
+                    android:textSize="20sp"
+                    android:visibility="gone" />
+
+                <!-- 表情点击按钮 -->
+
+                <ImageButton
+                    android:id="@+id/btn_face"
+                    android:layout_width="38dip"
+                    android:layout_height="38dip"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="8dp"
+                    android:background="@drawable/emo"
+                    android:scaleType="fitXY" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/ooo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:layout_marginTop="4dp"
+                android:layout_weight="1" >
+
+                <!-- 发送按钮 -->
+
+                <Button
+                    android:id="@+id/btn_send"
+                    android:layout_width="wrap_content"
+                    android:layout_height="38dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:background="@drawable/bg_chat_edit"
+                    android:text="@string/xn_custom_send"
+                    android:textColor="@color/xn_title_color"
+                    android:visibility="invisible" />
+                <!-- 加号点击按钮 -->
+
+                <ImageButton
+                    android:id="@+id/btn_plus"
+                    android:layout_width="40dip"
+                    android:layout_height="40dip"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/moreselector"
+                    android:scaleType="fitXY" />
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/line"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/rl_input"
+        layout="@layout/xn_blackline" />
+
+    <RelativeLayout
+        android:id="@+id/ll_facechoose"
+        android:layout_width="fill_parent"
+        android:layout_height="101dp"
+        android:layout_below="@id/line"
+        android:background="#fafafa"
+        android:visibility="gone" >
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/vp_contains"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+        </android.support.v4.view.ViewPager>
+
+        <LinearLayout
+            android:id="@+id/iv_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:orientation="horizontal" >
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/ll_pluschoose"
+        android:layout_width="fill_parent"
+        android:layout_height="98dip"
+        android:layout_below="@id/rl_input"
+        android:background="#fafafa"
+        android:visibility="gone" >
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/vp_plus"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+        </android.support.v4.view.ViewPager>
+
+        <LinearLayout
+            android:id="@+id/iv_plus"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:orientation="horizontal" >
+        </LinearLayout>
+    </RelativeLayout>
+
+</com.xiaoneng.view.FaceRelativeLayout>

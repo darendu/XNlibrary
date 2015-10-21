@@ -1,0 +1,201 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@drawable/bg_dialog_leavemsg" >
+
+    <TextView
+        android:id="@+id/pingjia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="25dp"
+        android:layout_marginTop="25dp"
+        android:text="@string/xn_require_evaluation"
+        android:textColor="#222222"
+        android:textSize="16sp" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/pingjia"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp"
+        android:background="#E2E2E2" />
+
+    <LinearLayout
+        android:id="@+id/sdk_pj_item"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/pingjia"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/re_vgood"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/item_vgood"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="25dp"
+                android:src="@drawable/sdk_pj_item_select" />
+
+            <TextView
+                android:id="@+id/sdk_item_vgood"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="21dp"
+                android:layout_toRightOf="@+id/item_vgood"
+                android:text="@string/xn_ad_appraise_vg"
+                android:textColor="@color/xn_sdk_ad_color"
+                tools:ignore="RelativeOverlap" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/re_good"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/item_good"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="25dp"
+                android:src="@drawable/sdk_pj_item_un" />
+
+            <TextView
+                android:id="@+id/sdk_item_good"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="21dp"
+                android:layout_toRightOf="@+id/item_good"
+                android:text="@string/xn_ad_appraise_good"
+                tools:ignore="RelativeOverlap" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/re_ordinary"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/item_ordinary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="25dp"
+                android:src="@drawable/sdk_pj_item_un" />
+
+            <TextView
+                android:id="@+id/sdk_item_ordinary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="21dp"
+                android:layout_toRightOf="@+id/item_ordinary"
+                android:text="@string/xn_ad_appraise_normal"
+                tools:ignore="RelativeOverlap" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/re_displeasure"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/item_displeasure"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="25dp"
+                android:src="@drawable/sdk_pj_item_un" />
+
+            <TextView
+                android:id="@+id/sdk_item_displeasure"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="21dp"
+                android:layout_toRightOf="@+id/item_displeasure"
+                android:text="@string/xn_ad_appraise_bad"
+                tools:ignore="RelativeOverlap" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/re_ungood"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/item_ungood"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="25dp"
+                android:src="@drawable/sdk_pj_item_un" />
+
+            <TextView
+                android:id="@+id/sdk_item_ungood"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="21dp"
+                android:layout_toRightOf="@+id/item_ungood"
+                android:text="@string/xn_ad_appraise_vb"
+                tools:ignore="RelativeOverlap" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/sdk_ison"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sdk_pj_item"
+        android:layout_marginTop="24dp"
+        android:background="@null" >
+
+        <TextView
+            android:id="@+id/sdk_cancel"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="0.5dip"
+            android:layout_weight="1"
+            android:background="@drawable/bg_dialog_leavemsg_left_btn"
+            android:gravity="center"
+            android:text="@string/xn_ad_appraise_cancel"
+            android:textColor="@color/xn_white" />
+
+        <TextView
+            android:id="@+id/sdk_define"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="0.5dip"
+            android:layout_weight="1"
+            android:background="@drawable/bg_dialog_leavemsg_right_btn"
+            android:gravity="center"
+            android:text="@string/xn_ad_appraise_submit"
+            android:textColor="@color/xn_white" />
+    </LinearLayout>
+    <!-- </RelativeLayout> -->
+    <!-- </RelativeLayout> -->
+
+</RelativeLayout>

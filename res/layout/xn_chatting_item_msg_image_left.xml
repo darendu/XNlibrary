@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="6dp" >
+
+    <RelativeLayout
+        android:id="@+id/rl_leftimg_sendtime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/tv_li_sendtime"
+            style="@style/chat_text_date_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="5dp"
+            android:text="sssss" />
+
+    </RelativeLayout>
+
+
+        <!-- android:background="@drawable/chat_send_time_bg" -->
+
+         
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginLeft="14dp"
+        android:layout_marginRight="36dp"
+        android:focusable="true" >
+
+        <RelativeLayout
+            android:id="@+id/tv_chatc"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:clickable="true"
+            android:focusable="true"
+            android:minHeight="50dp" >
+
+           <com.xiaoneng.view.CircleView
+            android:id="@+id/iv_userhead"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:focusable="false"
+            android:src="@drawable/kefu" />
+
+            <ImageView
+                android:id="@+id/l_tv_chatimage"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/iv_userhead"
+                android:adjustViewBounds="true"
+                android:background="@drawable/l2"
+                android:focusable="true"
+                android:minHeight="160dp"
+                android:maxWidth="120dp"
+                android:minWidth="90dp"
+                android:scaleType="fitXY"
+                />
+
+            <RelativeLayout
+                android:id="@+id/l_rl_wv"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_toRightOf="@id/iv_userhead"
+                android:background="@drawable/l2"
+                android:visibility="gone" >
+
+                <WebView
+                    android:id="@+id/l_web_view"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:background="@null"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:overScrollMode="never"
+                    android:scrollbars="none" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>

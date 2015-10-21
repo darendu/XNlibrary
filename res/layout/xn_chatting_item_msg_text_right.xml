@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" 
+    xmlns:imagecontrol="http://schemas.android.com/apk/com.xiaoneng.xnlibrary" 
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="6dp" >
+
+    <RelativeLayout
+        android:id="@+id/rl_righttext_sendtime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/tv_rt_sendtime"
+            style="@style/chat_text_date_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="5dp"
+            android:text="sssss" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/ss"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="54dp"
+        android:layout_marginRight="14dp"
+        android:layout_marginTop="10dp"
+        android:gravity="right" >
+
+        <com.xiaoneng.view.CircleView
+            android:id="@+id/sdk_iv_userhead"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:layout_alignParentRight="true"
+            
+            android:focusable="false"
+            android:minWidth="50dp"
+            android:src="@drawable/aa"  />
+
+        <LinearLayout
+            android:id="@+id/ll_left_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/sdk_iv_userhead"
+            >
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical" 
+                android:layout_margin="10dp">
+
+                <ProgressBar
+                    android:id="@+id/pb_text"
+                    style="@android:style/Widget.ProgressBar.Small.Inverse"
+                    android:indeterminateDrawable="@anim/progress_smallround"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"             
+                    android:visibility="visible" >
+                </ProgressBar>
+
+                <ImageView
+                    android:id="@+id/iv_rt_false"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_centerInParent="true"             
+                    android:layout_toLeftOf="@+id/i_tv_chatcc"
+                    android:src="@drawable/upfalse"
+                    android:visibility="visible" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_marginTop="4dp"
+                android:id="@+id/sdk_tv_chatcontent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:autoLink="phone|email"
+                android:background="@drawable/chatto_bg"
+                android:textIsSelectable="true"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center_vertical"
+                android:text="ssssssss"
+                android:textColor="#000000"
+                android:textSize="15sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>
